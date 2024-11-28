@@ -1,0 +1,48 @@
+<!-- joke.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A Funny Joke</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .punchline {
+            color: gray;
+            cursor: pointer;
+            font-style: italic;
+        }
+
+        .revealed {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+<nav>
+    <a href="main.html">Home</a>
+    <a href="emoji.html">Emojis</a>
+    <a href="images/gallery.html">Gallery</a>
+</nav>
+
+<h1>Here's a joke for those who found it:</h1>
+
+<p>What happens to an illegally parked frog?</p>
+
+<p id="punchline" class="punchline" onclick="revealPunchline()">Click here to find out...</p>
+
+<script>
+    function revealPunchline() {
+        var punchline = document.getElementById("punchline");
+        punchline.innerHTML = "It gets <i>toad</i> away! (yes i know its terrible hahahahaha)";
+        punchline.classList.add("revealed");
+    }
+</script>
+
+</body>
+</html>
+
+
+
